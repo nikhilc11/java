@@ -1,0 +1,74 @@
+Algorithms
+Data Structures
+Recursion - When we can easily breakdown a problem into similar subproblem - Less space/time efficient than Iteration
+Big-O-Notation
+Arrays - 1D & 2D
+Linked List (Single / Circular Single / Double / Circular Double)
+Stacks
+Queues
+Tree
+Binary Tree 
+Tree Traversal (PreOrder/InOrder/PostOrder/LevelOrder)
+Binary Search Tree
+AVL Tree (Left-Left / Left-Right / Right-Left / Right-Right)
+Binary Heap
+TRIE
+Hashing
+	Linear
+	Quadratic
+
+Simple Recursive Algorithms
+
+Brute Force Algorithms
+
+Randomized Algorithms
+
+Sorting Algorithms
+	Bubble
+	Selection
+	Insertion
+	Bucket
+	Merge
+	Quick
+	Heap
+
+Search Algorithms 
+	Linear
+	Binary
+
+Graph Algorithms
+	BFS
+	DFS
+	Topological Sort
+	Single Source Shortest Path Problem (BFS / Dijkstra's / BellmanFord / FloydWarshall) + No DFS
+	All Pairs Shortest Path Problem (BFS / Dijkstra's / BellmanFord / FloydWarshall) + No DFS
+	Minimum Spanning Tree (Prim's / Kruskal's)
+
+Greedy Algorithms
+	Activity Selection Problem
+	Coin Change Problem
+	Fraction and Knapsack Problem
+
+Divide and Conquer (DC) Algorithms
+	Number Factor Problem
+	House Robber Problem
+	Convert One String to Another Problem
+	Zero one KnapSack Problem
+	Longest Common Subsequence Problem
+	Longest Palindromic Subsequence/Substring Problem
+	Minimum Cost Path Problem
+
+Dynamic Programming:
+	Optimal Sub-Structure Problem
+	Overlapping Sub-Problems Property
+	Top Down - Memoization
+	Bottom Up - Tabulation
+	All DC Problems
+	Number Factor Problem
+	Convert One String to Another
+	House Robber Problem
+	Zero Knpasack Problem using (both DC and DP)
+	Challenging DP Exercises Section
+
+Recipe for Problem Solving
+Wild West Section
