@@ -1,0 +1,37 @@
+
+Lift Management System
+
+Functional Requirement
+Non Functional Requirement
+
+Implementation of a Use Case as discussed
+
+Design - Classes and Interfaces
+
+TestCases
+
+Elevator/Lift Management System
+
+
+
+
+
+Building -> List of Floors, ElevatorController
+
+ElevatorController -> List of Elevators, List Of Buttons, Active Button To Elevator Queue
+
+Elevator -> Current Floor, Direction, /*Weight*/, Active
+
+Button -> UpDirection, DownDirection, FloorNumber
+
+
+
+Functional:
+	1. On the press of a button, we would need an elevator to reach the required floor
+	2. Active or Inactive Lift
+
+Non Functional Requirements:
+	1. The sooner the better
+	2. Optimizing time overall
+	3. Scale this solution to more lifts
+

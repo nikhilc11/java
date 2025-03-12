@@ -7,6 +7,10 @@ package com.nikhilchadha.learning.algorithms.recursion;
  */
 public class PowerOfNumber {
 	
+	/**
+	 * Main Function for the Class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		powerOfNumber(2,-1);
@@ -23,15 +27,28 @@ public class PowerOfNumber {
 		powerOfNumber(2,10);
 	}
 	
-	public static void powerOfNumber(int num, int pow) {
-		if (pow < 0) {
+	/**
+	 * Wrapper Function to perform Input Validation before calling the Recursive Function
+	 * @param number
+	 * @param power
+	 */
+	public static void powerOfNumber(int number, int power) {
+		if (power < 0) {
 			System.out.println("Pleae provide a positive number in Power.");
 		}
 		else {
-			System.out.println(findPowerOfNumber(num, pow));
+			System.out.println(findPowerOfNumber(number, power));
 		}
 	}
 	
+	/**
+	 * Recursive Function written to identify the Result of Number 1 to the power of Number 2
+	 * @param number
+	 * @param power
+	 * @return number ^ power
+	 * @time_complexity_O(n)
+	 * @space_complexity_O(n)
+	 */
 	private static int findPowerOfNumber(int number, int power) {
 		
 		if (power == 0) {

@@ -1,5 +1,7 @@
 package com.nikhilchadha.learning.algorithms.recursion;
 
+import java.util.Arrays;
+
 /**
  * @author Nikhil Chadha
  * 
@@ -7,6 +9,10 @@ package com.nikhilchadha.learning.algorithms.recursion;
  */
 public class FibonacciNumbersFirstN {
 	
+	/**
+	 * Main Function for the Class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		fibonacciNumbersFirstN(-1);
@@ -25,38 +31,67 @@ public class FibonacciNumbersFirstN {
 		fibonacciNumbersFirstN(47);
 	}
 
-	public static void fibonacciNumbersFirstN(int num) {
-		if (num <= 0) {
+	/**
+	 * Wrapper Function to perform Input Validation before calling the Recursive Function
+	 * @param number
+	 */
+	public static void fibonacciNumbersFirstN(int number) {
+		if (number <= 0) {
 			System.out.println("Please provide a Positive Integer for Series Generation.");
 		}
 		else {
-			int[] arr = new int[num];
-			System.out.println("\n"+findFibonacciNumbersFirstN(num, arr));
-			printArray(arr);
+			int[] arr = new int[number];
+			System.out.println("\nFibonacci Series upto " + number + " positions.");
+			findFibonacciNumbersFirstN(number, arr);
+			System.out.println(Arrays.toString(arr));
 		}
+//		else {
+//			System.out.println("\nInput Number: "+ number +":");
+//			findFibonacciNumber(number-1);
+//		}
 	}
 	
-	private static boolean findFibonacciNumbersFirstN(int number, int[] seriesArray) {
+	/**
+	 * Function to calculate the Fibonacci Series in Order
+	 * @param number
+	 * @param seriesArray
+	 * @return true
+	 * @time_complexity_O(n)
+	 * @space_complexity_O(n)
+	 */
+	private static void findFibonacciNumbersFirstN(int number, int[] seriesArray) {
 		
 		if (number == 1) {
 			seriesArray[0] = 0;
-			return false;
+			return;
 		}
 		else if (number == 2) {
 			findFibonacciNumbersFirstN(1, seriesArray);
 			seriesArray[1] = 1;
-			return true;
+			return;
 		}
 		else {
 			findFibonacciNumbersFirstN(number-1, seriesArray);
 			seriesArray[number-1] = seriesArray[number -2] + seriesArray[number -3];
-			return true;
+			return;
 		}
 	}
 
-	private static void printArray(int[] array) {
-		for (int element : array) {
-			System.out.print(element + " ");
+	/**
+	 * @deprecated
+	 * Function to find the Fibonacci Series Number in the provided position
+	 * @param position
+	 * @return Fibonacci Series Number at Position
+	 * @time_complexity_O(2^n)
+	 * @space_complexity_O(n)
+	 */
+	private static int findFibonacciNumber(int position) {
+		
+		if (position <= 1) {
+			return position;
 		}
+		int fibonacciNumber = findFibonacciNumber(position-2) + findFibonacciNumber(position-1);
+		System.out.print(fibonacciNumber + " ");
+		return fibonacciNumber;
 	}
 }

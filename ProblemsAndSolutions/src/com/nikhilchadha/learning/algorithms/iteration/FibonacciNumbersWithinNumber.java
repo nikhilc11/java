@@ -7,6 +7,10 @@ package com.nikhilchadha.learning.algorithms.iteration;
  */
 public class FibonacciNumbersWithinNumber {
 	
+	/**
+	 * Main Function for the Class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		fibonacciNumbersWithinNumber(-1);
@@ -67,17 +71,27 @@ public class FibonacciNumbersWithinNumber {
 		fibonacciNumbersWithinNumber(900000);
 		fibonacciNumbersWithinNumber(1000000);
 	}
-
-	public static void fibonacciNumbersWithinNumber(int num) {
-		if (num <= 0) {
+	
+	/**
+	 * Wrapper Function to perform Input Validation before calling the Recursive Function
+	 * @param number
+	 */
+	public static void fibonacciNumbersWithinNumber(int number) {
+		if (number <= 0) {
 			System.out.println("Please provide a Positive Integer for Series Generation.");
 		}
 		else {
-			System.out.println("\nInput: "+ num);
-			findfibonacciNumbersWithinNumber(num);
+			System.out.println("\nInput: "+ number);
+			findfibonacciNumbersWithinNumber(number);
 		}
 	}
-	
+
+	/**
+	 * Function to calculate the Fibonacci Numbers less than a certain provided number
+	 * @param number
+	 * @time_complexity_O(logN)
+	 * @space_complexity_O(3)
+	 */
 	private static void findfibonacciNumbersWithinNumber(int number) {
 		
 		int num1 = 0;

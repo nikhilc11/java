@@ -1,18 +1,51 @@
 Algorithms
 Data Structures
+
 Recursion - When we can easily breakdown a problem into similar subproblem - Less space/time efficient than Iteration
-Big-O-Notation
+
+Code Performance Factors:
+	Time Complexity -> Number of Operations Performed (CPU Usage)
+	Space Complexity -> Total Space Required (Memory(RAM) Usage)
+	CRITICAL NOTE: ALWAYS CALCULATE BOTH
+
+Code Performance Metrics:
+	Big-Omicron-Notation -> At most Equal to or Less than the Worst Case -> Mostly used in this industry
+	Big-Theta-Notation   -> At Least Equal to or More than the Best Case
+	Big-Omega-Notation   -> Within Bounds of the Worst Case and the Best Case
+
+Complexity Types:
+	Constant      -> O(1)          -> Any Single Instruction -> Fixed Execution time -> Assignment Statement | Conditional Statement
+	Linear        -> O(N)          -> Single Loop -> Any Loop
+	Quadratic     -> O(N^M)        -> M Nested Loops
+	Logarithmic   -> O(LogN-Base2) -> Binary Search - Divide and Conquer Process - controlling parameters is split into parts of 2 in iteration
+	Exponential   -> O(2^N)        -> ??
+	Factorial     -> O(n!)         -> ??
+	Dropping of Constants and Non Dominant Terms
+	Each Input is considered to be important O(A+B) & O(A*B) - [ADD V/S Multiply]
+	Complexity Order from Low to High -> O(1) < O(LogN) < O(N) < O(NLogN) < O(N^M) < O(2^N) < O(N!)
+
 Arrays - 1D & 2D
+
 Linked List (Single / Circular Single / Double / Circular Double)
+
 Stacks
+
 Queues
+
 Tree
+
 Binary Tree 
+
 Tree Traversal (PreOrder/InOrder/PostOrder/LevelOrder)
+
 Binary Search Tree
+
 AVL Tree (Left-Left / Left-Right / Right-Left / Right-Right)
+
 Binary Heap
+
 TRIE
+
 Hashing
 	Linear
 	Quadratic
@@ -71,4 +104,31 @@ Dynamic Programming:
 	Challenging DP Exercises Section
 
 Recipe for Problem Solving
+
 Wild West Section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Additional Possible Programming Problems:
+	Sorting a Deck of Cards (Bucket Sort)
+	Searching a specific card in the Sorted Deck of Cards (Binary Search)
+	LCM of Two Numbers
+	LCM/GCD of an array of Numbers
+	All Numerology Parameters Calculation
+	All Astrology Parameters Calculation
+	All Vastu Parameters Calculation
+	All AstroVastu Parameters Calculation
+	
+
+

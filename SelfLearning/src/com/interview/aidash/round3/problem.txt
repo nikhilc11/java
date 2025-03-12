@@ -1,0 +1,80 @@
+
+Design Review
+Incident Management
+Actual Dev
+Data Platform
+Prin Engg
+
+Application to Data Movemwnt
+
+App team
+Diff Problems
+
+17+ Year of Exp
+
+Banks
+PRoblems
+7th domain
+
+AI Dash -> Looking FWD -> Scalability -> Level -> Data Platform
+
+
+Complex Problem -> Vision -> Tech -> Business
+
+
+
+
+
+
+
+
+Database -> Choose for our Data ->  HA + Data Access -> 
+
+Data Type -> Rational behind it -> 
+
+Different Databases -> 
+
+Depth:
+Breadth:
+Innovation:
+
+
+PostgreSQL -> HA + 
+
+2 Nodes -> Write Node -> 
+
+AP(Write) / A-A
+
+Node 1 -> Write/Read
+
+Node 2 -> Read Replica -> WAL Entries of Node 1 -> Availability Ping -> NFS Wal Operation
+
+
+
+Swiggy -> Consumer Heavy Application for -> Customer Information -> HA/Consitent/Fast Access -> 1 TB -> 11 Mil -> Partitioning and Sharding
+
+GeoSpatial Data -> Nearest Geo Locations -> Fond the Nearest Geo Locations based on input information -> 
+1. Lat-Long / Direction / Polygons -> Water Cricis Areas -> Mahadevpura area -> Contains 2-3 Polygons -> Imagery -> Overlayed onto Geo Data -> Level 12 -> 3 KM Area (Multiple Polygon Area) -> 
+2. a. Displacement
+2. b. Manhatten Distanct
+
+
+Convex Cell -> Join the Outer Edges of the Polygon -> PostgreSQL / MySQL -> 
+
+
+Continent
+Country
+State
+County/District
+
+
+
+
+Database -> Choose for our Data -> 
+
+1. Type of data
+2. Use Case
+
+Polyglot -> 
+
+

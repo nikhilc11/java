@@ -1,0 +1,96 @@
+
+Multi Modal Data
+
+Satallite Imagery
+LIDAR
+Weather And Numerical Data
+Tempeartire Data
+
+AI / ML Algos -> Merging the Data -> Disaster Managwmwnt/ Vegitation Management
+
+
+
+
+
+system Design -> Storing Multi Modal Data
+
+LIDAR Satalite
+Weather
+
+Spatio-Temopral Data -> Time and Geo Varient
+
+Area 1-10 () -> T1, T2, T3 -> R30, R50 -> LIDAR -> 
+
+AREA_DIM         -> AREA_ID/AREA_KEY
+DATE_DIM         -> DATE_KEY
+Time_DIM         -> TIME_KEY
+RESOLUTION_DIM   -> RESOLUTION_KEY -> Resolution_level (,,,,)
+DATASET_TYPE_DIM -> dataset_type_id -> Raster Data, Lidar Data
+
+S3_STORAGE_FILE_LINK_DIM -> AREA_KEY, DATE_KEY, TIME_KEY, RESOLUTION_KEY, dataset_type_id, link_to_file_in_s3
+
+
+
+
+
+AREA_DIM         -> AREA_ID/AREA_KEY
+DATE_DIM         -> DATE_KEY
+Time_DIM         -> TIME_KEY
+RESOLUTION_DIM   -> RESOLUTION_KEY -> Resolution_level (,,,,)
+DATASET_TYPE_DIM -> dataset_type_id -> Raster Data, Lidar Data
+
+S3_STORAGE_FILE_LINK
+
+
+Feature_Dim -> feature_key
+Feature_Fact -> feature_key, S3_STORAGE_FILE_LINK_key -> feature_fact_id ->
+
+
+
+
+1. For Each File -> Feature Extractions -> 
+
+
+
+
+Metadata associated with Each Dataset -> Resolution cm->50/30/... + Lidar Point Cloud
+
+
+
+
+Faster Searches
+Running Algorithms
+
+
+Enterprise data -> Geo Spatial Format -> Vector -> 
+
+
+1. Tenant Based System -> Tenant Based Shards/Partitions
+
+Deal with -> Duplicate Data
+
+Bad Data -> pre-Cleansing -> GeoSpatial Data not useful for Further Processing
+
+Data Platform -> ML Platform -> 
+
+Series - C
+
+
+
+
+
+Role Expectations:
+
+PE -> 70% Tech Side -> 30% People Management -> Incestion -> Develpment -> Failover Scenarios and Management -> Data Mesh -> Adapters -> Motivation -> 
+
+GeoSpatial Side -> GeoCatalog -> SpatioTemporalActiveCatalog
+
+Optimization
+
+Storage should be Optimum - Faster Searches -> Scalable Algorithms
+
+4-5 Years -> Twice in a year -> Presenct across all state in US and Canada -> RGB + Other Bands -> Hyper Cube -> 
+
+AI ML Tech -> Climate Tech -> 
+
+

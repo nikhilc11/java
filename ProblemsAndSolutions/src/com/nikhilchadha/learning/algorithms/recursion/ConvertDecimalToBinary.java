@@ -7,19 +7,34 @@ package com.nikhilchadha.learning.algorithms.recursion;
  */
 public class ConvertDecimalToBinary {
 	
+	/**
+	 * Main Function for the Class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		convertDecimalToBinary(100);
 	}
 	
-	public static void convertDecimalToBinary(int num) {
+	/**
+	 * Wrapper Function to perform Input Validation before calling the Recursive Function
+	 * @param number
+	 */
+	public static void convertDecimalToBinary(int number) {
 		
-		System.out.println("Input_Decimal_Number: " + num + " Output_Binary_Number: " + findBinaryOfDecimal(num));
+		System.out.println("Input_Decimal_Number: " + number + " Output_Binary_Number: " + findBinaryOfDecimal(number));
 	}
 	
+	/**
+	 * 
+	 * @param number
+	 * @return
+	 * @time_complexity_O()
+	 * @space_complexity_O()
+	 */
 	private static int findBinaryOfDecimal(int number) {
 		
-		// TODO - Generate Both Positive and Negative Test Cases
+		// TODO - Generate Both Positive and Negative Integers
 		return 0;
 	}
 

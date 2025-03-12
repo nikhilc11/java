@@ -7,6 +7,10 @@ package com.nikhilchadha.learning.algorithms.recursion;
  */
 public class SumOfDigits {
 	
+	/**
+	 * Main Function for the Class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		sumOfDigits(0);
@@ -21,11 +25,22 @@ public class SumOfDigits {
 		sumOfDigits(11111987);
 	}
 	
-	public static void sumOfDigits(int num) {
+	/**
+	 * Wrapper Function to perform Input Validation before calling the Recursive Function
+	 * @param number
+	 */
+	public static void sumOfDigits(int number) {
 		
-		System.out.println("Input(Number): " + num + " Output(Sum): " + findSumOfDigits(num));
+		System.out.println("Input(Number): " + number + " Output(Sum): " + findSumOfDigits(number));
 	}
 	
+	/**
+	 * Recursive Function written to identify the Sum of digits of a given Number.
+	 * @param number
+	 * @return sum of all digits of the given number
+	 * @time_complexity_O(n)
+	 * @space_complexity_O(n)
+	 */
 	private static int findSumOfDigits(int number) {
 		
 		if (number < 0) {

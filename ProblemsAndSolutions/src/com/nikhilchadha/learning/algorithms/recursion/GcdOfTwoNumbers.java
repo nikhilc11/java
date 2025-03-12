@@ -7,6 +7,10 @@ package com.nikhilchadha.learning.algorithms.recursion;
  */
 public class GcdOfTwoNumbers {
 	
+	/**
+	 * Main Function for the Class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		gcdOfTwoNumbers(3,-10);
@@ -18,20 +22,33 @@ public class GcdOfTwoNumbers {
 		gcdOfTwoNumbers(120,200);
 	}
 	
-	public static void gcdOfTwoNumbers(int num1, int num2) {
+	/**
+	 * Wrapper Function to perform Input Validation and Input Selection before calling the Recursive Function
+	 * @param number1
+	 * @param number2
+	 */
+	public static void gcdOfTwoNumbers(int number1, int number2) {
 		
-		if (num1 <= 0 || num2 <= 0) {
+		if (number1 <= 0 || number2 <= 0) {
 			System.out.println("Please enter Two Positive Non Zero Numbers.");
 		}
-		else if (num1 > num2) {
-			System.out.println("Input_Number_1: " + num1 + " Input_Number_2: " + num2 + " Output_GCD: " + findGcdOfTwoNumbers(num1, num2));
+		else if (number1 > number2) {
+			System.out.println("Input_Number_1: " + number1 + " Input_Number_2: " + number2 + " Output_GCD: " + findGcdOfTwoNumbers(number1, number2));
 		}
 		else {
-			System.out.println("Input_Number_1: " + num1 + " Input_Number_2: " + num2 + " Output_GCD: " + findGcdOfTwoNumbers(num2, num1));
+			System.out.println("Input_Number_1: " + number1 + " Input_Number_2: " + number2 + " Output_GCD: " + findGcdOfTwoNumbers(number2, number1));
 		}
 		
 	}
 	
+	/**
+	 * Recursive Function written to identify the GCD of given two number
+	 * @param number1
+	 * @param number2
+	 * @return GCD of the provided numbers
+	 * @time_complexity_O(logN)
+	 * @space_complexity_O(logN)
+	 */
 	private static int findGcdOfTwoNumbers(int number1, int number2) {
 		
 		int remainder = number1 % number2;

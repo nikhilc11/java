@@ -1,0 +1,21 @@
+Scenario -> Spaces Agnostic and Lower and Upper Case Agnostic
+
+search_string = This is a text string
+
+pattern = Tts
+
+response = tst
+
+resultantSearchString = search_string.replace(" ","").toUpper()
+
+resultantPattern = pattern.toUpper()
+
+for(char character : resultantSearchString) {
+
+	Thisisat
+	sisatext
+	satext
+	texts
+	tst
+
+}

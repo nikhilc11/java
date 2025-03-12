@@ -1,0 +1,49 @@
+
+Design a system to schedule data etl jobs/services across Kubernetes backed infra.
+
+Kubernetes => System => n number of Infra (CPU / Memory / Storage) => Latest State of Resource Availability => Spinning up new Instances
+
+-> Available v/s required
+-> Trigger Point from Another System
+
+E-Comm -> Orders -> done in a year -> Sync
+
+20 Tables -> 12 Dim (8) -> 40 Facts (14)
+
+2 Facts -> 
+
+schedule 
+data etl jobs/services 
+
+Schedules
+
+n Jobs
+m ETL Pipelines
+p Data Teams
+
+1. Job Tracking Database -> MySQL / PostgreSQL -> Job + Job Runs + Job Metrics + ... (A-P)
+2. Job Controller 
+					-> Scheduling (A-P)
+					-> Controlling (A-A-A-A-...) -> 	
+3. API/Services -> WebServices (A-A-A-A-A-A-A-A-A-.....)
+					-> Job Control Trigger 
+					-> Job/Properties Addition/Updation/Deletion
+					-> Job Monitor Status of all Run Jobs
+
+1. ADD A NEW JOB to the Database
+
+2. Add a Schedule Trigger to the Cron -> Automated -> 
+
+3. Scheduler will follow the new job schedule and execute the job on the controller (Which?)
+	-> (Choice based on the resources available)
+	--> Resources Available -> 
+	--> Resources Not Available -> WaitThread follow a (Priority Queue - With job about Feature) and Wait for resources to be available
+	
+4. The controller will Execute the Scheduled Job based on the instructions provided by the Scheduler
+
+W -> 20% -> 1
+R -> 80% -> 5
+
+W -> 80% -> 
+R -> 20% -> 
+EM -> Kundan Kumar -> Building Large Scale System

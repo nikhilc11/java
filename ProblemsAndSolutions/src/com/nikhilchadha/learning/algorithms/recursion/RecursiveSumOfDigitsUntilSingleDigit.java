@@ -7,6 +7,10 @@ package com.nikhilchadha.learning.algorithms.recursion;
  */
 public class RecursiveSumOfDigitsUntilSingleDigit {
 	
+	/**
+	 * Main Function for the Class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		recursiveSumOfDigits(0);
@@ -21,11 +25,22 @@ public class RecursiveSumOfDigitsUntilSingleDigit {
 		recursiveSumOfDigits(11111987);
 	}
 	
-	public static void recursiveSumOfDigits(int num) {
+	/**
+	 * Wrapper Function to perform Input Validation before calling the Recursive Function
+	 * @param number
+	 */
+	public static void recursiveSumOfDigits(int number) {
 		
-		System.out.println("Input(Number): " + num + " Output(TOTAL SUM): " + findSumOfDigits(num) + " Output(REDUCED SUM): " + reduceSumToSingleDigit(num));
+		System.out.println("Input(Number): " + number + " Output(TOTAL SUM): " + findSumOfDigits(number) + " Output(REDUCED SUM): " + reduceSumToSingleDigit(number));
 	}
 	
+	/**
+	 * Recursive Function written to identify the Sum of digits of a given Number.
+	 * @param number
+	 * @return sum of all digits of the given number
+	 * @time_complexity_O(n)
+	 * @space_complexity_O(n)
+	 */
 	private static int findSumOfDigits(int number) {
 		
 		if (number < 0) {
@@ -39,6 +54,13 @@ public class RecursiveSumOfDigitsUntilSingleDigit {
 		}
 	}
 	
+	/**
+	 * Recursive Function written to identify the Sum of digits of a given Number recursively until the sum does not reach a single digit.
+	 * @param number
+	 * @return recursive sum of all digits of the given number into a single digit
+	 * @time_complexity_O(NLogN)
+	 * @space_complexity_O(NLogN)
+	 */
 	private static int reduceSumToSingleDigit(int number) {
 		
 		int sum = findSumOfDigits(number);
@@ -48,5 +70,4 @@ public class RecursiveSumOfDigitsUntilSingleDigit {
 		}
 		return reduceSumToSingleDigit(sum);
 	}
-
 }

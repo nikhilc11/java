@@ -1,0 +1,100 @@
+-----------------------------------------------------------------------------------------------------------------------------
+System design round:
+	The intention would  be understand if he can create systems around large geospatial data
+	So some prep on the geospatial data domain will help in the interview
+-----------------------------------------------------------------------------------------------------------------------------
+Some topics you should know about:
+	1. Processing raster data - AOI (Areas of Interest), indexing image data 
+	2. Storage and processing of point cloud data - LiDAR data 
+	3. Data fusion
+-----------------------------------------------------------------------------------------------------------------------------
+	1. Vector 
+		Raster data -> 
+		AOI (Areas of Interest), indexing image data 
+	2. Storage and processing of point cloud data - LiDAR data 
+	3. Data fusion
+-----------------------------------------------------------------------------------------------------------------------------
+
+Where is the Data -> Area of Interest -> Geo -> Alt -> Lat + Long -> Polygon -> 
+
+Indexing image data -> 
+
+Ingestion      -> 
+Storage        -> 
+Transformation -> 
+Analytics      -> 
+
+Network Spanning -> Storing the Raster Itself -> Metadata for Raster -> Vector -> 
+
+Raster and Lidar -> 
+
+First Aspect -> Storing -> 
+
+Input -> Data for Bangalore -> Location / Polygon -> AOI -> 
+
+Transformation -> Second Aspect -> 
+
+Data Fusion -> 
+
+-----------------------------------------------------------------------------------------------------------------------------
+http://s2geometry.io/
+-----------------------------------------------------------------------------------------------------------------------------
+
+Raster Data:
+
+GIS, or geographic information systems, are computer-based tools used to store, visualize, analyze, and interpret geographic data. Geographic data (also called spatial, or geospatial data) identifies the geographic location of features.
+
+In GIS, vector and raster are two different ways of representing spatial data. However, the distinction between vector and raster data types is not unique to GIS: here is an example from the graphic design world which might be clearer.
+
+Raster data is made up of pixels (or cells), and each pixel has an associated value. Simplifying slightly, a digital photograph is an example of a raster dataset where each pixel value corresponds to a particular colour. In GIS, the pixel values may represent elevation above sea level, or chemical concentrations, or rainfall etc. The key point is that all of this data is represented as a grid of (usually square) cells. The difference between a digital elevation model (DEM) in GIS and a digital photograph is that the DEM includes additional information describing where the edges of the image are located in the real world, together with how big each cell is on the ground. This means that your GIS can position your raster images (DEM, hillshade, slope map etc.) correctly relative to one another, and this allows you to build up your map.
+
+Vector data consists of individual points, which (for 2D data) are stored as pairs of (x, y) co-ordinates. The points may be joined in a particular order to create lines, or joined into closed rings to create polygons, but all vector data fundamentally consists of lists of co-ordinates that define vertices, together with rules to determine whether and how those vertices are joined.
+
+Note that whereas raster data consists of an array of regularly spaced cells, the points in a vector dataset need not be regularly spaced.
+
+In many cases, both vector and raster representations of the same data are possible:
+
+enter image description here
+
+At this scale, there is very little difference between the vector representation and the "fine" (small pixel size) raster representation. However, if you zoomed in closely, you'd see the polygon edges of the fine raster would start to become pixelated, whereas the vector representation would remain crisp. In the "coarse" raster the pixelation is already clearly visible, even at this scale.
+
+Vector and raster datasets have different strengths and weaknesses, some of which are described in the thread linked to by @wetland. When performing GIS analysis, it's important to think about the most appropriate data format for your needs. In particular, careful use of raster algebra can often produce results much, much faster than the equivalent vector workflow.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Properties of Raster Data:
+
+Properties of Vector Data:
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+IMAGE INDEXING:
+	Procedure to Index Images based on Features/Text/Content
+	
+1. Textual (manual) -> ???
+2. Content- based (automated) -> Content Based Image Retrieval -> differentiate the color, shape, textures etc.
+	CBIR Techniques
+		Colour
+		Texture
+		Shape
+	Standards are Relevant to CBIR
+		network protocols
+		image storage formats such as TIFF or JPEG
+		image data compression standards such as JPEG and MPEG-2
+		database command languages such as SQL
+		metadata standards such as RDF
+-----------------------------------------------------------------------------------------------------------------------------
+
+A point cloud is a discrete set of data points in space. The points may represent a 3D shape or object. Each point position has its set of Cartesian coordinates (X, Y, Z).[1] Point clouds are generally produced by 3D scanners or by photogrammetry software, which measure many points on the external surfaces of objects around them. As the output of 3D scanning processes, point clouds are used for many purposes, including to create 3D computer-aided design (CAD) models for manufactured parts, for metrology and quality inspection, and for a multitude of visualizing, animating, rendering, and mass customization applications.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Lidar (/ˈlaɪdɑːr/, also LIDAR, LiDAR or LADAR, an acronym of "light detection and ranging"[1] or "laser imaging, detection, and ranging"[2]) is a method for determining ranges by targeting an object or a surface with a laser and measuring the time for the reflected light to return to the receiver. Lidar may operate in a fixed direction (e.g., vertical) or it may scan multiple directions, in which case it is known as lidar scanning or 3D laser scanning, a special combination of 3-D scanning and laser scanning.[3] Lidar has terrestrial, airborne, and mobile applications.[4][5]
+
+Lidar is commonly used to make high-resolution maps, with applications in surveying, geodesy, geomatics, archaeology, geography, geology, geomorphology, seismology, forestry, atmospheric physics,[6] laser guidance, airborne laser swathe mapping (ALSM), and laser altimetry. It is used to make digital 3-D representations of areas on the Earth's surface and ocean bottom of the intertidal and near coastal zone by varying the wavelength of light. It has also been increasingly used in control and navigation for autonomous cars[7] and for the helicopter Ingenuity on its record-setting flights over the terrain of Mars.[8]
+
+The evolution of quantum technology has given rise to the emergence of Quantum LiDAR, demonstrating higher efficiency and sensitivity when compared to conventional LiDAR systems.[9]
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Data fusion - using Dayasets provided from different Data Sources

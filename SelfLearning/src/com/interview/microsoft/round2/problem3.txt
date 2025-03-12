@@ -1,0 +1,64 @@
+-- How is Channel as a feature is performing?
+-- How are uses interacting with other users?
+
+date_dim        = { date_key         -> date, month, year, .... }
+time_dim        = { time_key         -> hour, minute, second, .... }
+organiation_dim = { organization_key -> organizatioh_id, organization_name, ... }
+user_dim        = { user_key         -> user_id, user_name, user_email_id, manager_key, organization_key, ... }
+channel_dim     = { channel_key      -> channel_id, channel_name, ... }
+event_dim       = { event_key        -> event }
+
+channel_user_dim = { channel_key, user_key -> added_date_key, added_time_key, expired_date_key, expired_time_key }
+
+SELECT channel_key, sum(1) as user_count from channel_user_dim where expired_date_key IS NULL;
+
+
+SELECT 
+    channel_count,
+    sum(1) as user_count 
+from (
+    SELECT 
+        user_key,
+        CASE WHEN (sum(1) <= 10) then CAST(sum(1) as String) else "10+" END as channel_count 
+    from 
+        channel_user_dim 
+    where 
+        expired_date_key IS NULL
+) order by 1;
+
+channel_user_fact = { channel_key, user_key, date_key, time_key, event_key -> <> } -FLF
+
+
+
+message         = { message_key  -> message_id, user_key, channel_key, date_key, time_key }
+reply           = { reply_key    -> , ... }
+reactions       = { reaction_key -> , ... }
+
+-- How are uses interacting on the same post with other users? 
+
+response_dim    = { response_type(message/reply/reaction), response_key(message_key,reply_key,reaction_key) -> 
+                        user_key, channel_key, date_key, time_key, 
+                        response_id(message_id,reply_id,reaction_id), -- based on category
+                        parent_key(null,message_key,reply_key), parent_type(null,message/reply)
+                        reaction_type(null,1,2,3,4,5)}
+
+
+
+WITH
+base_cte AS (
+    SELECT 
+        a.response_type, 
+        a.response_key, 
+        a.user_key, 
+        b.user_key as parent_user_key, 
+        a.parent_key as message_group
+    from response_dim a inner join response_dim b
+    ON a.parent_key = b.response_key and a.parent_type = b.response_type
+    WHERE a.parent_type = "message" 
+    and a.response_type = "reply"
+)
+SELECT message_group, collect_set(parent_user_key, user_key) GROUP BY message_group
+
+
+
+

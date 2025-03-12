@@ -7,6 +7,10 @@ package com.nikhilchadha.learning.algorithms.recursion;
  */
 public class FactorialOfNumber {
 	
+	/**
+	 * Main Function for the Class
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		factorialOfNumber(-1);
@@ -23,16 +27,26 @@ public class FactorialOfNumber {
 		factorialOfNumber(10);
 	}
 	
-	
-	public static void factorialOfNumber(int num) {
-		if (num < 0) {
+	/**
+	 * Wrapper Function to perform Input Validation before calling the Recursive Function
+	 * @param number
+	 */
+	public static void factorialOfNumber(int number) {
+		if (number < 0) {
 			System.out.println("Please provide a Positive Integer for Calculation.");
 		}
 		else {
-			System.out.println(findFactorialOfNumber(num));
+			System.out.println(findFactorialOfNumber(number));
 		}
 	}
 	
+	/**
+	 * Recursive Function written to identify Factorial of a given number
+	 * @param number
+	 * @return factorial of the provided number
+	 * @time_complexity_O(n)
+	 * @space_complexity_O(n)
+	 */
 	private static int findFactorialOfNumber(int number) {
 		
 		if (number == 0) {
